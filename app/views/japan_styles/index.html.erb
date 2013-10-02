@@ -1,0 +1,21 @@
+<% content_for(:title, "Japan Culture & Japanese Style - Japan Crafts Style") -%> 
+<% content_for(:description, "【Japan Culture & Japanese Style】We are introduction to Japanese traditional crafts from Tokyo Japan.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "japanese, tokyo, kyoto, katana, made in japan, japanese painting, crafts, 伝統工芸") -%> 
+
+<% @japan_styles.each do |japan_style| %>
+<div class="article">
+  <div class="img">
+  <%= link_to (image_tag japan_style.article_image), japan_style %>
+  </div><!-- /.img -->
+  <div class="meta">
+    <h2><%= link_to japan_style.article_title, japan_style %></h2>
+  <div class="sub-text">
+    <%= japan_style.updated_at.strftime('%b.%d') %>
+  </div>
+  <div class="excerpt">
+    <%= link_to truncate(japan_style.article_text, :length => 80),japan_style %> 
+  </div>
+  </div><!-- /.meta -->
+</div><!-- /.article -->
+<% end %>
+<%= render 'home/sns_box' %>

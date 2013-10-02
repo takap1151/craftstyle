@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>ID:</b>
+  <%= @traditional_craft.id %>
+</p>
+
+<p>
+  <b>Crafts:</b>
+  <%= @traditional_craft.crafts %>
+</p>
+
+<p>
+  <b>Crafts en:</b>
+  <%= @traditional_craft.crafts_en %>
+</p>
+
+<p>
+  <b>Categories:</b>
+  <%= @traditional_craft.categories %>
+</p>
+
+<p>
+  <b>Categories en:</b>
+  <%= @traditional_craft.categories_en %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @traditional_craft.area %>
+</p>
+
+<p>
+  <b>Area en:</b>
+  <%= @traditional_craft.area_en %>
+</p>
+
+<p>
+  <b>Prefecture:</b>
+  <%= @traditional_craft.prefecture %>
+</p>
+
+  <div class="form-actions">
+<%= link_to 'Edit', edit_admin_traditional_craft_path(@traditional_craft), :class => 'btn btn-primary' %>
+<%= link_to 'Back', admin_traditional_crafts_path, :class => 'btn' %>
+</div>
+<% @traditional_craft.craftsmen.each do |f| %>
+  <%= f.craftsman_name %>
+<% end %>

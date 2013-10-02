@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %>
+
+
+  Article title:
+  <%= @japan_style.article_title %>
+<br>
+<%= image_tag @japan_style.article_image, :size => '300x500' %>
+<br>
+  Article text:
+  <%= simple_format(raw @japan_style.article_text) %>
+<br>
+<br>
+  Article text Jp:
+  <%= simple_format(raw @japan_style.article_text_jp) %>
+<br>
+<br>
+  Article Reference:
+  <%= link_to @japan_style.reference_name, @japan_style.reference_url, :target => '_blank' %>
+<br>
+<%= link_to 'Edit', edit_admin_japan_style_path(@japan_style), :class => 'btn btn-primary' %> |
+<%= link_to 'Back', admin_japan_styles_path %> | 
+<%= link_to '本番', @japan_style, :class => 'btn', :target => '_blank' %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  crafts: MyString
+  crafts_en: MyString
+  categories: MyString
+  categories_en: MyString
+  area: MyString
+  area_en: MyString
+  prefecture: MyString
+  prefecture_en: MyString
+  craftsman_products_id: MyString
+  craftsman_id: 
+
+two:
+  crafts: MyString
+  crafts_en: MyString
+  categories: MyString
+  categories_en: MyString
+  area: MyString
+  area_en: MyString
+  prefecture: MyString
+  prefecture_en: MyString
+  craftsman_products_id: MyString
+  craftsman_id: 

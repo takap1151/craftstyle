@@ -1,0 +1,41 @@
+<% content_for(:title, "Japanese Traditional Craftsman [#{@craftsman.craftsman_name_en}] - Japan Crafts Style") -%> 
+<% content_for(:description, "Japanese Traditional Craftsman [#{@craftsman.craftsman_name_en}].We are introduction to Japanese traditional crafts from Tokyo Japan.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "japanese, tokyo, kyoto, katana, made in japan, japanese painting, crafts, 伝統工芸, [#{@craftsman.craftsman_name_en}]") -%> 
+
+<div class="main-container">
+  <h2><%= @craftsman.craftsman_name_en %>
+    <% @craftsman.traditional_crafts.limit(1).each do |f| %>
+      (<%= f.categories_en %>)
+    <% end %>
+  </h2>
+  <div class="img">
+    <%= image_tag @craftsman.profile_image, :style => "width:190px;height:190px;" %>
+  </div>
+  <div class="main-article">
+    <div class="text">
+    <h3><%= simple_format @craftsman.profile_en %></h3>
+  </div><!-- /.text -->
+  <% if @craftsman.profile.present? %>
+    <p>+++++</p>
+    <div class="sub-text">
+    <h3><%= simple_format  @craftsman.profile %></h3>
+  </div><!-- /.sub-text -->
+  <% end %>
+</div><!-- /.main-article -->
+
+  <div class="btn">
+    <%= link_to 'View craftsmen web site', @craftsman.website, :target => '_blank', :rel => 'nofollow' %>
+  </div>
+
+<div class="other-container">
+<% @craftsman.craftsmen_products.each do |craftsmen_product| %>
+  <div class="grid" data-size="2">
+    <div class="imgholder">
+      <%= link_to (image_tag craftsmen_product.product_image, :alt => craftsmen_product.product_name_en, :style => "width:190px;height:190px;"), craftsmen_product %>
+    </div>
+  </div>
+<% end %>
+</div><!-- /.other-container -->
+
+<%= render 'home/sns_box' %>
+</div><!-- /.main-container -->

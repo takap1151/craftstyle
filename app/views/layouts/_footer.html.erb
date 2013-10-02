@@ -1,0 +1,66 @@
+<div class="footer-contents">
+  <h3>Craftsmen</h3>
+  <ul>
+    <% Craftsman.order('updated_at DESC').limit(15).each do |craftsman| %>
+      <li><%= link_to craftsman.craftsman_name_en, craftsman %></li>
+    <% end %>
+    <ul>
+    <div class="meta">
+    <%= link_to 'And more', craftsmen_path %>
+  </div><!-- /.meta -->
+  <h3>Japan_style</h3>
+  <ul>
+    <% JapanStyle.order('updated_at DESC').limit(15).each do |japan_style| %>
+      <li><%= link_to japan_style.article_title, japan_style %></li>
+    <% end %>
+  </ul>
+    <div class="meta">
+    <%= link_to 'And more', japan_styles_path %>
+  </div><!-- /.meta -->
+</div><!-- /.footer-contents -->
+
+
+<div class="footer-contents">
+  <h3>About</h3>
+  <div class="image">
+    <h4>"Japan Crafts Style" gives an introduction about Japanese traditional crafts & culture for you.<br>
+    The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.<br>
+    <br>
+    "Japan Crafts Style" is now recruiting new craftsmen.<br>
+    If you don't wish to be featured in Japan Crafts Style, I could delete the page about you.
+    </h4>
+  </div>
+  <h3>Craftsmen Products</h3>
+  <div class="image">
+    <% CraftsmenProduct.limit(15).all.sort_by{rand}.each do |products|%>
+      <%= link_to (image_tag products.product_image, :size => '100x100'), products %>
+    <% end %>
+    <div class="meta">
+    <%= link_to 'And more', craftsmen_products_path %>
+  </div><!-- /.meta -->
+  </div><!-- /.image -->
+</div><!-- /.footer-contents -->
+
+<div class="footer-contents">
+
+  <h3>Facebook</h3>
+  <div class="image widget" style="width:315px;">
+    <div class="fb-like-box" data-href="https://www.facebook.com/JapanCraftsStyle" data-width="315" data-height="273" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+</div>
+  <h3>Twitter</h3>
+  <div class="image widget">
+<a class="twitter-timeline" href="https://twitter.com/JCraftStyle" data-widget-id="365058100178350080">Tweets by @JCraftStyle</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div><!-- /.footer-contents -->
+
+<div class="footer-contents">
+
+  <h3>Contact</h3>
+  <div class="image">
+  <%= render 'inquiries/new' %>
+</div>
+</div><!-- /.footer-contents -->
+<div id="copyright">
+  <p>COPYRIGHT &copy; <%= link_to 'Japan Crafts Style', root_path %>. All Rights Reserved<%= link_to '.', admin_root_path, :target => '_blank' %> <%= link_to 'Sitemap', sitemap_path %></p>
+</div><!-- /#copyright -->

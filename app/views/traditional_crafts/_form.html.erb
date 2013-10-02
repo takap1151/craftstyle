@@ -1,0 +1,57 @@
+<%= form_for(@traditional_craft) do |f| %>
+  <% if @traditional_craft.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traditional_craft.errors.count, "error") %> prohibited this traditional_craft from being saved:</h2>
+
+      <ul>
+      <% @traditional_craft.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :crafts %><br />
+    <%= f.text_field :crafts %>
+  </div>
+  <div class="field">
+    <%= f.label :crafts_en %><br />
+    <%= f.text_field :crafts_en %>
+  </div>
+  <div class="field">
+    <%= f.label :categories %><br />
+    <%= f.text_field :categories %>
+  </div>
+  <div class="field">
+    <%= f.label :categories_en %><br />
+    <%= f.text_field :categories_en %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :area_en %><br />
+    <%= f.text_field :area_en %>
+  </div>
+  <div class="field">
+    <%= f.label :prefecture %><br />
+    <%= f.text_field :prefecture %>
+  </div>
+  <div class="field">
+    <%= f.label :prefecture_en %><br />
+    <%= f.text_field :prefecture_en %>
+  </div>
+  <div class="field">
+    <%= f.label :craftsman_products_id %><br />
+    <%= f.text_field :craftsman_products_id %>
+  </div>
+  <div class="field">
+    <%= f.label :craftsman_id %><br />
+    <%= f.text_field :craftsman_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

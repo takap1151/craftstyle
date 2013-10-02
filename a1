@@ -1,0 +1,882 @@
+commit 33b977f66420fc447f10050b75c251176975830d
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Oct 1 16:57:54 2013 +0900
+
+    sort_by{rand}
+
+ .DS_Store                                     |  Bin 0 -> 15364 bytes
+ app/controllers/admin/craftsmen_controller.rb |    2 +-
+ app/views/layouts/_footer.html.erb            |    2 +-
+ 3 files changed, 2 insertions(+), 2 deletions(-)
+
+commit d5e70a86a652a43746f8dc61d301bc9ea97dad6a
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Sep 20 12:32:03 2013 +0900
+
+    Google Tagmanager addedwq
+
+ app/views/layouts/application.html.erb |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+
+commit 467c3d7d2fa2404bbf8bc1aa916a4af501005913
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Sep 17 13:59:17 2013 +0900
+
+    fb-like-box fiexed
+
+ app/views/layouts/_footer.html.erb |    2 +-
+ db/schema.rb                       |   33 +--------------------------------
+ 2 files changed, 2 insertions(+), 33 deletions(-)
+
+commit 2d3b8fef5a30fe06a3bfcc3113d1f00dc3f9d82a
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Sep 17 13:12:03 2013 +0900
+
+    config/databases fixed
+
+ config/database.yml |    8 ++++----
+ 1 files changed, 4 insertions(+), 4 deletions(-)
+
+commit cbdf913a883ede22df242207b7b1d2d1063f2c63
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Sep 4 13:35:47 2013 +0900
+
+    DS_Store fail deleted
+
+ app/models/.DS_Store                |  Bin 6148 -> 0 bytes
+ app/validators/.DS_Store            |  Bin 6148 -> 0 bytes
+ app/views/admin/craftsmen/.DS_Store |  Bin 6148 -> 0 bytes
+ app/views/admin/inquiries/.DS_Store |  Bin 6148 -> 0 bytes
+ app/views/devise/.DS_Store          |  Bin 6148 -> 0 bytes
+ config/environments/.DS_Store       |  Bin 6148 -> 0 bytes
+ config/initializers/.DS_Store       |  Bin 6148 -> 0 bytes
+ config/locales/.DS_Store            |  Bin 6148 -> 0 bytes
+ db/.DS_Store                        |  Bin 6148 -> 0 bytes
+ db/migrate/.DS_Store                |  Bin 6148 -> 0 bytes
+ test/fixtures/.DS_Store             |  Bin 6148 -> 0 bytes
+ test/functional/.DS_Store           |  Bin 6148 -> 0 bytes
+ 12 files changed, 0 insertions(+), 0 deletions(-)
+
+commit ee339503a220bf8679fa4827a58bbdaa2e6b96c0
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Aug 29 21:16:49 2013 +0900
+
+    footerのFBガジェと修正
+
+ app/views/layouts/_footer.html.erb |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 00192c95a161961a516dd31c4303ef929d8f1d8c
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Aug 29 15:52:52 2013 +0900
+
+    mail関連を削除した際に無駄に消えたデータの復元
+    git checkout ファイル名
+
+ app/.DS_Store                       |  Bin 0 -> 6148 bytes
+ app/models/.DS_Store                |  Bin 0 -> 6148 bytes
+ app/validators/.DS_Store            |  Bin 0 -> 6148 bytes
+ app/views/admin/craftsmen/.DS_Store |  Bin 0 -> 6148 bytes
+ app/views/admin/inquiries/.DS_Store |  Bin 0 -> 6148 bytes
+ app/views/devise/.DS_Store          |  Bin 0 -> 6148 bytes
+ config/environments/.DS_Store       |  Bin 0 -> 6148 bytes
+ config/initializers/.DS_Store       |  Bin 0 -> 6148 bytes
+ config/locales/.DS_Store            |  Bin 0 -> 6148 bytes
+ db/.DS_Store                        |  Bin 0 -> 6148 bytes
+ db/migrate/.DS_Store                |  Bin 0 -> 6148 bytes
+ test/fixtures/.DS_Store             |  Bin 0 -> 6148 bytes
+ test/functional/.DS_Store           |  Bin 0 -> 6148 bytes
+ 13 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f7340bcd6d5120b5db8709c317e9ccfb4041bd06
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Aug 26 17:40:46 2013 +0900
+
+    topコンテンツ増加
+
+ app/assets/stylesheets/common.css.scss.erb |   14 +++++++
+ app/controllers/craftsmen_controller.rb    |    1 +
+ app/controllers/home_controller.rb         |    3 +-
+ app/views/craftsmen/index.html.erb         |    3 ++
+ app/views/home/index.html.erb              |   53 +++++++++++++++++++++------
+ app/views/japan_styles/index.html.erb      |    4 --
+ config/routes.rb                           |    2 +-
+ 7 files changed, 62 insertions(+), 18 deletions(-)
+
+commit f399b729d1b6ce04650ec71bd5995cb56e2d4fc5
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 23 17:59:53 2013 +0900
+
+    デザイン修正
+
+ app/assets/javascripts/application.js      |    2 +-
+ app/assets/stylesheets/common.css.scss.erb |    1 -
+ app/views/craftsmen/.index.html.erb.swp    |  Bin 0 -> 12288 bytes
+ app/views/japan_styles/.index.html.erb.swp |  Bin 0 -> 12288 bytes
+ app/views/japan_styles/index.html.erb      |    4 ++++
+ app/views/layouts/application.html.erb     |    2 +-
+ 6 files changed, 6 insertions(+), 3 deletions(-)
+
+commit 252f82a86e6fe83547e503ac72d5f90bf3408450
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 23 17:46:07 2013 +0900
+
+    JQueryしゅうせい
+
+ app/assets/javascripts/application.js      |    8 ++++----
+ app/assets/stylesheets/common.css.scss.erb |    5 ++++-
+ 2 files changed, 8 insertions(+), 5 deletions(-)
+
+commit a883b21cd4d6d7cdc4a41c9629ad6f109dc6576e
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 23 16:55:47 2013 +0900
+
+    修正
+
+ app/assets/stylesheets/common.css.scss.erb |   11 +++++++++++
+ app/views/admin/japan_styles/show.html.erb |    7 ++++---
+ app/views/japan_styles/show.html.erb       |   12 ++++++++----
+ 3 files changed, 23 insertions(+), 7 deletions(-)
+
+commit aeb5b1eed6a07d106ddf98e17aca8474d4bc4d41
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 23 15:25:43 2013 +0900
+
+    JapanStyleにReferenceを追加
+    ＆サイト修正
+
+ app/assets/stylesheets/common.css.scss.erb         |    6 ++++--
+ app/models/japan_style.rb                          |    2 +-
+ app/views/admin/japan_styles/_form.html.erb        |    8 ++++++++
+ app/views/admin/japan_styles/show.html.erb         |    4 ++++
+ app/views/japan_styles/show.html.erb               |    3 +++
+ ...30823060055_add_column_japan_style_reference.rb |    7 +++++++
+ db/schema.rb                                       |    4 +++-
+ 7 files changed, 30 insertions(+), 4 deletions(-)
+
+commit 848a251f822d0f2dfc30e518d7aac6d84bd8b10f
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 23 11:49:04 2013 +0900
+
+    craftsmenProductの修正
+
+ app/controllers/craftsmen_products_controller.rb |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 941225de47ee329b20fb73e47869e7c3c22322bb
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 23 11:22:18 2013 +0900
+
+    sitemap更新
+
+ public/sitemap.xml |  144 +++++++++++++++++++++++++++++++++++++++++++---------
+ 1 files changed, 120 insertions(+), 24 deletions(-)
+
+commit bfae959f755be1448d8dc26dd8433cf8b113e0e1
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Aug 22 15:12:46 2013 +0900
+
+    各ページのKyeword、Descriptionを検索ボリュームを検討した上で設定
+
+ app/views/craftsmen/index.html.erb          |    3 ---
+ app/views/craftsmen/show.html.erb           |    4 ++--
+ app/views/craftsmen_products/index.html.erb |    4 ++--
+ app/views/craftsmen_products/show.html.erb  |    4 ++--
+ app/views/japan_styles/index.html.erb       |    4 ++--
+ app/views/japan_styles/show.html.erb        |    4 ++--
+ app/views/layouts/application.html.erb      |    4 ++--
+ 7 files changed, 12 insertions(+), 15 deletions(-)
+
+commit 912cf1c36aa6052990d6b4c7f1eecfdbb2b508c2
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Aug 20 16:20:50 2013 +0900
+
+    FBガジェット修正
+
+ app/assets/javascripts/application.js      |    2 +-
+ app/assets/stylesheets/common.css.scss.erb |    4 ++++
+ app/views/layouts/_footer.html.erb         |    6 +++---
+ 3 files changed, 8 insertions(+), 4 deletions(-)
+
+commit 673f758251d6f9b9610e9d223c4ad209e8f786d4
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 16 09:36:46 2013 +0900
+
+    Facebookガジェットのズレを修正
+    日の丸の位置を変更
+
+ app/assets/stylesheets/common.css.scss.erb |    4 ++--
+ app/views/layouts/_footer.html.erb         |    2 +-
+ app/views/layouts/application.html.erb     |    2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+commit ffca2c033a88f8a13dd43a822c1d7a27d30d07bd
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Aug 13 13:16:01 2013 +0900
+
+    refix
+
+ app/controllers/japan_styles_controller.rb |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 573dca56f08b158af0424f050b0afbd3f770a971
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Aug 13 12:27:32 2013 +0900
+
+    japanstyle#show limit16 other japan style article
+
+ app/controllers/japan_styles_controller.rb |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 6b38ac747ba62931e23b7f55d1a49dfbe4214306
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Aug 12 14:05:59 2013 +0900
+
+    sitemap更新
+
+ app/assets/stylesheets/.home.css.scss.swp   |  Bin 0 -> 12288 bytes
+ app/assets/stylesheets/home.css.scss        |   21 +++++++++++++++
+ app/controllers/home_controller.rb          |    5 +++-
+ app/views/admin/japan_styles/_form.html.erb |    1 +
+ app/views/home/.sitemap.html.erb.swp        |  Bin 0 -> 12288 bytes
+ app/views/home/sitemap.html.erb             |   36 ++++++++++++++++++++++++++-
+ 6 files changed, 61 insertions(+), 2 deletions(-)
+
+commit e7ca3e77e1b2e7ae09044cf9cba3cc5cd426e31f
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 9 13:47:46 2013 +0900
+
+    JapanStyleモデルにarticle_text_jpカラム追加
+
+ app/controllers/admin/craftsmen_controller.rb      |    2 +-
+ .../admin/craftsmen_products_controller.rb         |    2 +-
+ app/models/japan_style.rb                          |    2 +-
+ app/views/admin/japan_styles/_form.html.erb        |    3 +++
+ app/views/admin/japan_styles/index.html.erb        |    6 ++++--
+ app/views/admin/japan_styles/show.html.erb         |    4 ++++
+ app/views/japan_styles/show.html.erb               |    4 +++-
+ ...0809043421_add_column_japan_style_article_jp.rb |    9 +++++++++
+ db/schema.rb                                       |    7 ++++---
+ 9 files changed, 30 insertions(+), 9 deletions(-)
+
+commit a2b8f5ed3ba1efdae5a195a7984f100b191f659c
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Aug 8 20:58:42 2013 +0900
+
+    Top並び順をprofile_enを持っててかつIDの並びが最新順に変更
+
+ app/controllers/craftsmen_controller.rb           |    2 +-
+ app/views/admin/craftsmen/show.html.erb           |    2 +-
+ app/views/admin/craftsmen_products/index.html.erb |    2 +-
+ app/views/admin/craftsmen_products/show.html.erb  |    2 +-
+ app/views/craftsmen/index.html.erb                |    2 +-
+ app/views/craftsmen_products/show.html.erb        |   12 ++++++------
+ 6 files changed, 11 insertions(+), 11 deletions(-)
+
+commit e5338e4579026d40893c9a9bc5c38be8e1551622
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Aug 8 11:03:05 2013 +0900
+
+    Update sitemap
+
+ app/views/craftsmen_products/show.html.erb |    2 +-
+ public/sitemap.xml                         |  192 +++++++++++++++++-----------
+ 2 files changed, 121 insertions(+), 73 deletions(-)
+
+commit f39266779210cc26aca4ec5592de870762e2cf40
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Aug 7 19:56:12 2013 +0900
+
+    SNS Widget　デザイン修正
+
+ app/assets/stylesheets/common.css.scss.erb |    2 +-
+ app/views/layouts/_footer.html.erb         |   18 +++++++++---------
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+commit 9d92c1db558bbf6d287b5bca313b38bc3660ad60
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Aug 7 19:45:49 2013 +0900
+
+    外部スクリプトを一括おまとめ
+    FacebookとTwitterのウィジットをFooterに設置
+
+ app/assets/stylesheets/common.css.scss.erb |    5 ++++
+ app/views/home/_external_script.html.erb   |   32 ++++++++++++++++++++++++++++
+ app/views/home/_sns_box.html.erb           |    4 +++
+ app/views/layouts/_footer.html.erb         |   10 ++++++++
+ app/views/layouts/application.html.erb     |   20 +----------------
+ 5 files changed, 52 insertions(+), 19 deletions(-)
+
+commit 0cc0b24f0dea7ce7d10cf03b5068bba2ad118080
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Aug 7 16:21:56 2013 +0900
+
+    各ページにSNS共有ボタンをテンプレートを持たせる形で追加
+
+ app/assets/javascripts/application.js            |    6 +--
+ app/controllers/craftsmen_controller.rb          |   14 ++++-
+ app/controllers/craftsmen_products_controller.rb |   13 +++-
+ app/controllers/japan_styles_controller.rb       |   12 +++
+ app/controllers/traditional_crafts_controller.rb |   85 +++-------------------
+ app/views/craftsmen/index.html.erb               |    1 +
+ app/views/craftsmen/show.html.erb                |    4 +-
+ app/views/craftsmen_products/index.html.erb      |   33 +++++----
+ app/views/craftsmen_products/show.html.erb       |    4 +-
+ app/views/home/_sns_box.html.erb                 |    3 +
+ app/views/home/sitemap.html.erb                  |    5 +-
+ app/views/japan_styles/index.html.erb            |   19 +++--
+ app/views/japan_styles/show.html.erb             |    5 +-
+ app/views/traditional_crafts/index.html.erb      |    1 +
+ app/views/traditional_crafts/show.html.erb       |    2 +
+ 15 files changed, 92 insertions(+), 115 deletions(-)
+
+commit 91df26dddd4aef6cff107231e25f65f66646afde
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Aug 7 14:36:10 2013 +0900
+
+    webmastertool & Google Analytics再設定
+
+ app/views/layouts/application.html.erb |   11 ++++++++---
+ 1 files changed, 8 insertions(+), 3 deletions(-)
+
+commit 82693d21cc3d1b314dd9e12c304a24ed55cba436
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Aug 7 12:52:55 2013 +0900
+
+    javascriptの適正化
+    CSSの整理
+    各詳細ページのデザイン&コンテンツ追加
+    TraditionalCraftsの詳細ページ作成中
+
+ app/assets/javascripts/application.js              |  276 +++-----------------
+ app/assets/javascripts/jquery.easing.1.3.js        |  205 ---------------
+ app/assets/javascripts/jquery.min.js               |    5 -
+ .../javascripts/jquery.mobile.customized.min.js    |   10 -
+ app/assets/stylesheets/common.css.scss.erb         |   63 ++++-
+ app/controllers/craftsmen_products_controller.rb   |    1 +
+ app/models/traditional_craft.rb                    |    2 +-
+ app/views/craftsmen/show.html.erb                  |   56 ++---
+ app/views/craftsmen_products/show.html.erb         |   40 +++-
+ app/views/japan_styles/show.html.erb               |   41 +++-
+ app/views/layouts/application.html.erb             |   17 +-
+ 11 files changed, 194 insertions(+), 522 deletions(-)
+
+commit 0ffef480273645c61d95ff6a9daa98a8425cbd9e
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Aug 6 16:16:08 2013 +0900
+
+    Add excerptClass in Craftsmen#index
+
+ app/assets/images/logo.png                 |  Bin 0 -> 16094 bytes
+ app/assets/stylesheets/common.css.scss.erb |   42 ++++++++++++----------------
+ app/views/craftsmen/index.html.erb         |   22 ++++++++------
+ app/views/home/_slideshow.html.erb         |    3 +-
+ app/views/layouts/_footer.html.erb         |    2 +-
+ app/views/layouts/_header.html.erb         |    2 +-
+ app/views/layouts/application.html.erb     |   15 +++++----
+ 7 files changed, 42 insertions(+), 44 deletions(-)
+
+commit ea01b5eeb9f4977003cff08029d653998a26de93
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Aug 6 15:03:24 2013 +0900
+
+    Delete TopCover
+    put the SCSS
+
+ app/assets/stylesheets/.common.css.scss.erb.swp |  Bin 20480 -> 0 bytes
+ app/assets/stylesheets/common.css.scss.erb      |  293 ++++++++++-------------
+ app/views/layouts/._footer.html.erb.swp         |  Bin 12288 -> 0 bytes
+ app/views/layouts/_footer.html.erb              |   21 +-
+ app/views/layouts/_header.html.erb              |    6 +-
+ app/views/layouts/application.html.erb          |   11 +-
+ 6 files changed, 144 insertions(+), 187 deletions(-)
+
+commit 237f0eb0b38260acdf7695c48569bf4ac8609ba9
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 2 18:55:13 2013 +0900
+
+    前頁ユニーク化
+
+ app/views/craftsmen/index.html.erb         |    6 +++---
+ app/views/craftsmen/show.html.erb          |    4 ++++
+ app/views/craftsmen_products/show.html.erb |    4 ++++
+ app/views/home/sitemap.html.erb            |    4 ++++
+ app/views/inquiries/complete.html.erb      |    4 ++++
+ app/views/japan_styles/index.html.erb      |    4 ++++
+ app/views/japan_styles/show.html.erb       |    4 ++++
+ app/views/layouts/application.html.erb     |    4 ++--
+ 8 files changed, 29 insertions(+), 5 deletions(-)
+
+commit f13e7cae5392df39241cfd4655da23f064ee66cb
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 2 13:21:07 2013 +0900
+
+    favicon追加
+
+ app/assets/images/favicon.ico              |  Bin 0 -> 1406 bytes
+ app/assets/stylesheets/common.css.scss.erb |    5 +----
+ app/views/craftsmen/index.html.erb         |    5 +++++
+ app/views/layouts/application.html.erb     |    1 +
+ public/favicon.ico                         |  Bin 0 -> 1406 bytes
+ 5 files changed, 7 insertions(+), 4 deletions(-)
+
+commit aa178ea5ac01153177deed95bb53e1eec121e46e
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 2 11:28:11 2013 +0900
+
+    Facebookボタン&リンク追加
+
+ app/assets/stylesheets/common.css.scss.erb |   10 +++++++---
+ app/views/craftsmen_products/show.html.erb |    2 ++
+ app/views/japan_styles/show.html.erb       |    1 +
+ app/views/layouts/_footer.html.erb         |    4 ++++
+ app/views/layouts/application.html.erb     |    4 +---
+ 5 files changed, 15 insertions(+), 6 deletions(-)
+
+commit af7577fdaf4ce23724222c696294a9cafb3d1093
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 2 11:05:58 2013 +0900
+
+    Facebookいいねボタン追加
+
+ app/assets/images/header2.jpg          |  Bin 0 -> 794513 bytes
+ app/views/layouts/application.html.erb |   13 +++++++++++++
+ 2 files changed, 13 insertions(+), 0 deletions(-)
+
+commit a7cbac938ab24450027e34f162df7397987ab856
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 2 09:52:21 2013 +0900
+
+    topのスライドショーの動作が重いのでひとまず画像に置き換え
+
+ app/views/layouts/application.html.erb |    6 +++++-
+ 1 files changed, 5 insertions(+), 1 deletions(-)
+
+commit 6a47e3d26ba30751627ae9298e616352884fd4b2
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Fri Aug 2 09:45:01 2013 +0900
+
+    aboutページ削除
+    bodyのfontをOpen Sansに変更
+
+ app/assets/stylesheets/common.css.scss.erb |    7 +++----
+ app/views/craftsmen/index.html.erb         |    3 ---
+ app/views/craftsmen/show.html.erb          |    4 ++--
+ app/views/layouts/_header.html.erb         |    1 -
+ app/views/layouts/application.html.erb     |    3 +++
+ config/routes.rb                           |    2 +-
+ 6 files changed, 9 insertions(+), 11 deletions(-)
+
+commit 230bb8e9d00a4292d4dbf994d0d46f439beca383
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Sat Jul 27 01:08:39 2013 +0900
+
+    about英文対応
+
+ app/assets/stylesheets/.common.css.scss.erb.swp |  Bin 20480 -> 20480 bytes
+ app/assets/stylesheets/common.css.scss.erb      |    4 ++++
+ app/views/inquiries/complete.html.erb           |    6 ++----
+ app/views/layouts/._footer.html.erb.swp         |  Bin 12288 -> 12288 bytes
+ app/views/layouts/_footer.html.erb              |   16 +++++++++++++---
+ 5 files changed, 19 insertions(+), 7 deletions(-)
+
+commit d08c66731fd3e01f1345c6f30aaa5b8c1d005bf1
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 25 13:37:29 2013 +0900
+
+    footerにandmore追加
+    各画像フォルダ作成
+
+ app/assets/images/craftsman1.jpg                  |  Bin 9737 -> 0 bytes
+ app/assets/images/craftsmen_images/craftsman1.jpg |  Bin 0 -> 9737 bytes
+ app/assets/images/header.png                      |  Bin 0 -> 630078 bytes
+ app/assets/stylesheets/.common.css.scss.erb.swp   |  Bin 0 -> 20480 bytes
+ app/assets/stylesheets/common.css.scss.erb        |    6 ++++++
+ app/controllers/craftsmen_products_controller.rb  |    2 +-
+ app/views/home/_slideshow.html.erb                |   10 +++++-----
+ app/views/layouts/._footer.html.erb.swp           |  Bin 0 -> 12288 bytes
+ app/views/layouts/_footer.html.erb                |   15 ++++++++++++---
+ 9 files changed, 24 insertions(+), 9 deletions(-)
+
+commit bc146b86e4500139018a7918c338d4f4bea2e471
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 25 13:18:26 2013 +0900
+
+    余分なものを削除
+
+ app/assets/stylesheets/bootstrap_and_overrides.css |    7 -------
+ 1 files changed, 0 insertions(+), 7 deletions(-)
+
+commit 2b6ba24198adcec1df6e5bc0f37e9c3b8462f8d4
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 25 13:08:24 2013 +0900
+
+    問い合わせフォーム作成
+
+ app/.email_validator.rb.swp                        |  Bin 0 -> 12288 bytes
+ app/assets/images/craftsman1.jpg                   |  Bin 0 -> 9737 bytes
+ app/assets/javascripts/admin/inquiries.js.coffee   |    3 +
+ app/assets/javascripts/inquiries.js.coffee         |    3 +
+ app/assets/stylesheets/admin/inquiries.css.scss    |    3 +
+ app/assets/stylesheets/common.css.scss.erb         |  190 +++++++++++---------
+ app/assets/stylesheets/inquiries.css.scss          |    3 +
+ app/controllers/admin/inquiries_controller.rb      |   17 ++
+ app/controllers/admin/japan_styles_controller.rb   |    2 +-
+ app/controllers/application_controller.rb          |    1 +
+ app/controllers/inquiries_controller.rb            |   17 ++
+ app/controllers/japan_styles_controller.rb         |    2 +-
+ app/helpers/admin/inquiries_helper.rb              |    2 +
+ app/helpers/inquiries_helper.rb                    |    2 +
+ app/models/inquiry.rb                              |    5 +
+ app/validators/email_validator.rb                  |   20 ++
+ app/views/admin/inquiries/index.html.erb           |   22 +++
+ app/views/admin/inquiries/show.html.erb            |   29 +++
+ app/views/craftsmen/index.html.erb                 |    3 -
+ app/views/inquiries/_new.html.erb                  |   11 ++
+ app/views/inquiries/complete.html.erb              |    5 +
+ app/views/layouts/_footer.html.erb                 |   37 ++++-
+ app/views/layouts/admin.html.erb                   |    5 +-
+ config/routes.rb                                   |   10 +
+ db/migrate/20130723103027_create_inquiries.rb      |   11 ++
+ db/schema.rb                                       |   10 +-
+ test/fixtures/inquiries.yml                        |   11 ++
+ test/functional/admin/inquiries_controller_test.rb |    7 +
+ test/functional/inquiries_controller_test.rb       |    7 +
+ test/unit/helpers/admin/inquiries_helper_test.rb   |    4 +
+ test/unit/helpers/inquiries_helper_test.rb         |    4 +
+ test/unit/inquiry_test.rb                          |    7 +
+ 32 files changed, 358 insertions(+), 95 deletions(-)
+
+commit 9e86029fe19820336894269946cd60be4b275607
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Jul 22 16:55:43 2013 +0900
+
+    Update sitemap
+
+ public/sitemap.xml |    4 ++++
+ 1 files changed, 4 insertions(+), 0 deletions(-)
+
+commit 7151df0fe0bf90f8324a839c5e694a8f171ff4b7
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Jul 22 16:18:30 2013 +0900
+
+    Create other_japan_style
+
+ app/assets/stylesheets/admin/application.css       |    2 +-
+ .../stylesheets/admin/bootstrap_and_overrides.css  |    7 ++
+ app/assets/stylesheets/common.css.scss.erb         |    3 +-
+ app/assets/stylesheets/reset.css                   |    2 +-
+ app/controllers/japan_styles_controller.rb         |   75 +-------------------
+ app/views/craftsmen/show.html.erb                  |    6 +-
+ app/views/craftsmen_products/index.html.erb        |    8 +-
+ app/views/craftsmen_products/show.html.erb         |    5 +-
+ app/views/home/_about.html.erb                     |    4 +-
+ app/views/japan_styles/index.html.erb              |    9 +--
+ app/views/japan_styles/show.html.erb               |   17 +++--
+ app/views/layouts/application.html.erb             |    2 +
+ 12 files changed, 37 insertions(+), 103 deletions(-)
+
+commit 6ddd75c1423ba9f70cfe95e71c07c634b3f23506
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Jul 22 13:54:01 2013 +0900
+
+    Updated sitemap
+
+ public/sitemap.xml |  234 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 234 insertions(+), 0 deletions(-)
+
+commit 85ef9cc9a77d8b0f3c1d93ea5a383871d0d4452f
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Jul 22 13:49:03 2013 +0900
+
+    Setting googleAnalytics&Webmastertool
+
+ app/views/home/_slideshow.html.erb     |    2 +-
+ app/views/home/about.html.erb          |    1 -
+ app/views/layouts/_header_img.html.erb |   35 --------------------------
+ app/views/layouts/application.html.erb |   10 +++++++
+ app/views/layouts/home.html.erb        |   43 --------------------------------
+ public/googlec4feae753db170c2.html     |    1 +
+ 6 files changed, 12 insertions(+), 80 deletions(-)
+
+commit b1d50d798f8abc146f27f14edac89381a07091a5
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 18 17:27:14 2013 +0900
+
+    slideshowの画像を諦めて公開
+
+ app/controllers/application_controller.rb |    1 -
+ app/views/home/_slideshow.html.erb        |    8 ++++----
+ 2 files changed, 4 insertions(+), 5 deletions(-)
+
+commit a049d1e9f139f2f31e8da4980a2cf8c31102fb00
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 18 16:20:06 2013 +0900
+
+    Craftsmen web siteへのリンク追加
+
+ app/controllers/craftsmen_controller.rb |    2 +-
+ app/views/craftsmen/show.html.erb       |    5 +++++
+ app/views/layouts/admin.html.erb        |    2 +-
+ 3 files changed, 7 insertions(+), 2 deletions(-)
+
+commit cd51249992ec54e2307f8e0cab3ccfa3f71e9df1
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 18 15:57:22 2013 +0900
+
+    修正完了
+
+ app/views/admin/craftsmen_products/index.html.erb |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+commit 95144bb81657520898d994f74c2d67d6cd9dbf31
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 18 15:40:50 2013 +0900
+
+    craftsmen_productsのエラー対応
+
+ app/assets/stylesheets/common.css.scss.erb        |   17 +++++++++++++++++
+ app/views/admin/craftsmen_products/index.html.erb |    4 ----
+ app/views/craftsmen/index.html.erb                |    4 +++-
+ app/views/craftsmen_products/index.html.erb       |   16 ++++++++--------
+ app/views/home/_about.html.erb                    |    2 ++
+ app/views/home/_slideshow.html.erb                |   11 +++++------
+ config/routes.rb                                  |    2 +-
+ 7 files changed, 36 insertions(+), 20 deletions(-)
+
+commit e137c2abcdaddd8b377d1f189db1256056fea601
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Thu Jul 11 16:16:19 2013 +0900
+
+    もろもろ完成かな
+
+ app/assets/javascripts/application.js            |  231 ++++++++++++++++++++-
+ app/assets/stylesheets/application.css           |   22 ++
+ app/assets/stylesheets/common.css.scss.erb       |   49 ++++-
+ app/controllers/craftsmen_controller.rb          |   14 +--
+ app/controllers/craftsmen_products_controller.rb |   63 ------
+ app/controllers/home_controller.rb               |    7 +-
+ app/views/craftsmen/index.html.erb               |   14 +-
+ app/views/craftsmen/show.html.erb                |   37 +++-
+ app/views/craftsmen_products/show.html.erb       |   26 +---
+ app/views/home/_slideshow.html.erb               |   36 ++++
+ app/views/home/index.html.erb                    |    7 +-
+ app/views/home/sitemap.html.erb                  |    4 +-
+ app/views/layouts/_footer.html.erb               |    2 +-
+ app/views/layouts/application.html.erb           |   49 +++--
+ config/routes.rb                                 |    5 +-
+ 15 files changed, 403 insertions(+), 163 deletions(-)
+
+commit 4c94e72ceb27d5903baec706a98f831ada7cd1ea
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Mon Jul 8 14:15:16 2013 +0900
+
+    色々追加
+
+ app/assets/javascripts/japan_styles.js.coffee    |    3 +
+ app/assets/stylesheets/application.css           |    8 ++
+ app/assets/stylesheets/common.css.scss.erb       |    2 +-
+ app/assets/stylesheets/japan_styles.css.scss     |    3 +
+ app/controllers/admin/japan_styles_controller.rb |   84 ++++++++++++++++++++++
+ app/controllers/japan_styles_controller.rb       |   83 +++++++++++++++++++++
+ app/helpers/japan_styles_helper.rb               |    2 +
+ app/models/japan_style.rb                        |    3 +
+ app/views/admin/craftsmen/show.html.erb          |    8 +-
+ app/views/admin/japan_styles/_form.html.erb      |   29 ++++++++
+ app/views/admin/japan_styles/edit.html.erb       |    6 ++
+ app/views/admin/japan_styles/index.html.erb      |   21 ++++++
+ app/views/admin/japan_styles/new.html.erb        |    5 ++
+ app/views/admin/japan_styles/show.html.erb       |   13 ++++
+ app/views/craftsmen/show.html.erb                |   20 +----
+ app/views/japan_styles/index.html.erb            |   17 +++++
+ app/views/japan_styles/show.html.erb             |    8 ++
+ app/views/layouts/_header.html.erb               |    1 +
+ app/views/layouts/admin.html.erb                 |    1 +
+ config/application.rb                            |    2 +-
+ config/routes.rb                                 |    2 +
+ db/migrate/20130704013917_create_japan_styles.rb |   11 +++
+ db/schema.rb                                     |   10 +++-
+ test/fixtures/japan_styles.yml                   |   11 +++
+ test/functional/japan_styles_controller_test.rb  |   49 +++++++++++++
+ test/unit/helpers/japan_styles_helper_test.rb    |    4 +
+ test/unit/japan_style_test.rb                    |    7 ++
+ 27 files changed, 390 insertions(+), 23 deletions(-)
+
+commit 38a89c8ec76fb5241c8828a128f358bc7d0157b8
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Jul 3 20:35:49 2013 +0900
+
+    syuusei
+
+ app/views/craftsmen_products/index.html.erb |    1 -
+ 1 files changed, 0 insertions(+), 1 deletions(-)
+
+commit 702f3b66b0ff5e599c046afe78ef50ef59afd1b2
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Jul 3 20:26:01 2013 +0900
+
+    syuusei
+
+ app/controllers/craftsmen_products_controller.rb |   12 +-----------
+ app/views/craftsmen_products/.index.html.erb.swp |  Bin 12288 -> 0 bytes
+ 2 files changed, 1 insertions(+), 11 deletions(-)
+
+commit 14590efa40fef12816a0af63c1956064b6a0dfbd
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Jul 3 20:12:35 2013 +0900
+
+    csv
+
+ .Gemfile.swp                                       |  Bin 12288 -> 0 bytes
+ app/assets/javascripts/.application.js.swp         |  Bin 12288 -> 0 bytes
+ app/models/traditional_craft.rb                    |    2 +-
+ .../admin/craftsmen_products/.index.html.erb.swp   |  Bin 12288 -> 0 bytes
+ 4 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 8202339137d60790b92a12817a4dc09393b83a5f
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Jul 3 19:50:49 2013 +0900
+
+    デザイン修正＆csv追加
+
+ app/assets/javascripts/.application.js.swp         |  Bin 0 -> 12288 bytes
+ app/assets/javascripts/application.js              |   53 +++++++++++++-------
+ app/assets/javascripts/camera.min.js               |    2 +-
+ app/assets/stylesheets/application.css             |    1 -
+ app/assets/stylesheets/common.css.scss.erb         |   43 ++++++++++++----
+ app/models/craftsman.rb                            |    4 ++
+ app/models/craftsmen_product.rb                    |    5 ++
+ app/models/traditional_craft.rb                    |    3 +
+ app/views/admin/craftsmen/_form.html.erb           |   12 +++++
+ app/views/admin/craftsmen/show.html.erb            |    2 +-
+ .../admin/craftsmen_products/.index.html.erb.swp   |  Bin 0 -> 12288 bytes
+ app/views/admin/craftsmen_products/_form.html.erb  |    2 +-
+ app/views/admin/craftsmen_products/index.html.erb  |    4 +-
+ app/views/admin/craftsmen_products/show.html.erb   |    2 +-
+ app/views/craftsmen/index.html.erb                 |    2 +-
+ app/views/craftsmen/show.html.erb                  |   39 ++++++---------
+ app/views/craftsmen_products/.index.html.erb.swp   |  Bin 0 -> 12288 bytes
+ app/views/craftsmen_products/index.html.erb        |   36 ++++++-------
+ app/views/layouts/_header.html.erb                 |    9 ++--
+ app/views/layouts/application.html.erb             |    2 +
+ app/views/layouts/home.html.erb                    |    4 +-
+ public/craftsmen_priducts.csv                      |   17 ++++--
+ public/traditional_crafts.csv                      |    6 ++
+ 23 files changed, 156 insertions(+), 92 deletions(-)
+
+commit d1ceb468a0a5cf2dcf0527fb6d286bd65b52b2d8
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Jul 3 10:48:40 2013 +0900
+
+    craftsmen#indexもグレースケールに
+
+ app/views/craftsmen/index.html.erb |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+commit 4949765cc2cc59d079faf02c66375ba19ec96df6
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Wed Jul 3 10:29:45 2013 +0900
+
+    ActiveRecord::StatementInvalid (PG::Error: ERROR:  relation "users" does
+    not exist
+    を修正
+
+ .Gemfile.swp                            |  Bin 0 -> 12288 bytes
+ app/controllers/craftsmen_controller.rb |    1 -
+ 2 files changed, 0 insertions(+), 1 deletions(-)
+
+commit ce99f54bb1c6515c34438c68063bdcc53d208728
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 21:59:06 2013 +0900
+
+    test
+
+ app/assets/images/bridge.jpg                       |  Bin 261677 -> 0 bytes
+ app/assets/images/header.jpg                       |  Bin 442677 -> 0 bytes
+ app/assets/images/image/_notes/dwsync.xml          |    1 -
+ app/assets/images/image/slides/_notes/dwsync.xml   |    1 -
+ app/assets/images/image/slides/big_bunny_fake.jpg  |  Bin 121104 -> 0 bytes
+ app/assets/images/image/slides/leaf.jpg            |  Bin 178309 -> 0 bytes
+ app/assets/images/image/slides/sea.jpg             |  Bin 107620 -> 0 bytes
+ app/assets/images/image/slides/shelter.jpg         |  Bin 357930 -> 0 bytes
+ .../images/image/slides/thumbs/_notes/dwsync.xml   |    1 -
+ .../images/image/slides/thumbs/big_bunny_fake.jpg  |  Bin 5089 -> 0 bytes
+ app/assets/images/image/slides/thumbs/bridge.jpg   |  Bin 4744 -> 0 bytes
+ .../images/image/slides/thumbs/header_bg.png       |  Bin 986 -> 0 bytes
+ app/assets/images/image/slides/thumbs/leaf.jpg     |  Bin 5672 -> 0 bytes
+ app/assets/images/image/slides/thumbs/road.jpg     |  Bin 3957 -> 0 bytes
+ app/assets/images/image/slides/thumbs/sea.jpg      |  Bin 3151 -> 0 bytes
+ app/assets/images/image/slides/thumbs/shelter.jpg  |  Bin 5141 -> 0 bytes
+ app/assets/images/image/slides/thumbs/tree.jpg     |  Bin 5007 -> 0 bytes
+ app/assets/images/image/slides/tree.jpg            |  Bin 298017 -> 0 bytes
+ app/assets/images/leaf.jpg                         |  Bin 178309 -> 0 bytes
+ app/assets/images/road.jpg                         |  Bin 259821 -> 0 bytes
+ app/assets/images/sea.jpg                          |  Bin 107620 -> 0 bytes
+ app/assets/images/tree.jpg                         |  Bin 298017 -> 0 bytes
+ app/views/home/index.html.erb                      |    2 +-
+ 23 files changed, 1 insertions(+), 4 deletions(-)
+
+commit 78ef5da83daf5846295bab569f4184f07aa849e4
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 21:38:47 2013 +0900
+
+    Add csv
+
+ app/models/craftsmen_product.rb |   10 ++++++++++
+ public/craftsman.csv            |   18 +++++++++---------
+ public/craftsmen_priducts.csv   |    6 ++++++
+ 3 files changed, 25 insertions(+), 9 deletions(-)
+
+commit f6eb38f8fbade2cead3136eef1de71f47618dbed
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 21:30:45 2013 +0900
+
+    Delete deviseMigrationFile
+
+ db/migrate/20130523062911_devise_create_users.rb |   50 ----------------------
+ 1 files changed, 0 insertions(+), 50 deletions(-)
+
+commit c6076b4409823c0e20fc3fc0349fd07f4dbaf6c5
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 21:22:13 2013 +0900
+
+    migrationFile整理
+
+ db/migrate/20130523062911_devise_create_users.rb   |    2 ++
+ .../20130527111257_add_users_id_to_craftsmen.rb    |    6 ------
+ db/migrate/20130617065702_create_admin_users.rb    |    1 +
+ db/migrate/20130617113428_add_column_admin_user.rb |    9 ---------
+ .../20130620112645_create_favorite_craftsmen.rb    |   10 ----------
+ .../20130624053718_change_column_craftsmen_tel.rb  |    9 ---------
+ 6 files changed, 3 insertions(+), 34 deletions(-)
+
+commit f7bdc24904e4522faabe248fc31e90774ee7d63c
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 20:55:09 2013 +0900
+
+    Craftsmanにcsvで追加
+
+ app/models/craftsman.rb |    2 +-
+ public/craftsman.csv    |    9 +++++++++
+ 2 files changed, 10 insertions(+), 1 deletions(-)
+
+commit 7b9c77495ac968b74b409a6c466e3b3d4e553c16
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 20:39:50 2013 +0900
+
+    グレースケールのjQuery追加設定
+
+ app/assets/javascripts/application.js          |   26 ++-
+ app/assets/javascripts/jquery.BlackAndWhite.js |  264 ++++++++++++++++++++++++
+ app/assets/stylesheets/common.css.scss.erb     |    7 +-
+ app/views/home/index.html.erb                  |    2 +-
+ app/views/layouts/application.html.erb         |   39 +----
+ app/views/layouts/home.html.erb                |    1 +
+ 6 files changed, 296 insertions(+), 43 deletions(-)
+
+commit c21c93dc81a852332070803d141879ae15563a53
+Author: Takao Murakami <tamurakamio@gmail.com>
+Date:   Tue Jul 2 19:51:34 2013 +0900
+
+    Retry bwWrapper/jQuery
+

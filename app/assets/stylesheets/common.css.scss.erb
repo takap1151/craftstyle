@@ -1,0 +1,249 @@
+// * Default * //
+// * jQuery * //
+.bwWrapper {
+  position:relative;
+  display:block;
+}
+// * Font * //
+@font-face {
+  font-family:"Nothing You Could Do";
+  src: local('Nothing You Could Do'), local('NothingYouCouldDo'), url(http://themes.googleusercontent.com/static/fonts/nothingyoucoulddo/v3/jpk1K3jbJoyoK0XKaSyQAXEXHkG8fPQqt_tcmM6oBg_3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
+.japan {
+  position:absolute;
+  top:30px;
+  left:-320px;
+  width: 400px;
+  height: 400px;
+  background: red;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  border-radius: 200px;
+}
+
+.sns-box {
+  text-align:center;
+  position:fixed;
+  top:300px;
+  right:20px;
+  border:1px solid #BBB;
+  padding:8px;
+  width:70px;
+}
+// * /Default * //
+
+
+// * Body * //
+body {
+  font-size:14px;
+  //font-family:"Nothing You Could Do";
+  font-family:メイリオ,"Meiryo","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  a {
+    font-size:14px;
+    color:#BBB;
+    &:hover {
+      text-decoration:none;
+      color:#000;
+    }
+  }
+  #container {
+    background-color:#fff;
+    width:970px;
+    padding-top:30px;
+    #header {
+      text-align:center;
+      padding-top:30px;
+      #nav {
+        overflow:hidden;
+        width:970px;
+        margin:auto;
+        padding:60px 0;
+        ul {
+          overflow:hidden;
+          li{
+            float:left;
+            display:inline;
+            width:33.3333%;
+            a {
+              font-size:14px;
+              font-family:"helvetica neue", helvetica, arial, sans-serif;
+              color:#000;
+              letter-spacing:2px;
+              b{
+                color:#d7003a;
+                font-size:1.2em;
+              }
+            }
+          }
+        }
+      }
+    }
+    #main {
+      width:1040px;
+      margin:0 auto;
+      overflow:hidden;
+      .article {
+        float:left;
+        margin-right:70px;
+        width:190px;
+        height:300px;
+        margin-bottom:10px;
+        img {
+          width:190px;
+          height:190px;
+        border:1px solid #BBB;
+        }
+        .meta  {
+          padding-top:10px;
+          h2 {
+            color:#000;
+            a {
+              color:#000;
+              font-size:12px;
+              font-weight:bold;
+            }
+          }
+          .sub-text {
+            font-size:10px;
+          }
+          .excerpt {
+            padding-top:10px;
+            a {
+              color:#BBB;
+              font-size:11px;
+            }
+          }
+        } 
+      }
+      .sub-title {
+        text-align:center;
+        margin-bottom:30px;
+        padding:10px;
+        p {
+          clear:both;
+          font-family:"helvetica neue", helvetica, arial, sans-serif;
+          font-size:25px;
+        }
+        b {
+          color:#d7003a;
+          font-size:1.2em;
+        }
+      }
+      .main-container {
+        text-align:center;
+        h2 {
+          font-family:"Nothing You Could Do";
+          font-size:24px;
+        }
+        .img{
+          margin-top:20px;
+        }
+        .btn {
+          border:1px solid #BBB;
+          border-radius:5px;
+          display:inline;
+          padding:10px 10px;
+        }
+        .main-article {
+          font-size:12px;
+          max-width:500px;
+          margin:0 auto;
+          margin-bottom:30px;
+          .text {
+            padding:20px 0;
+            line-height:1.5;
+            a {
+              font-size:12px;
+              text-decoration:underline;
+              color:#000;
+            }
+          }
+          .sub-text {
+            padding:20px 0;
+            line-height:1.5;
+            letter-spacing:1.5;
+            color:#BBB;
+            a {
+              font-size:12px;
+              text-decoration:underline;
+            }
+          }
+          .reference {
+            text-align:left;
+            font-size:12px;
+            a {
+            font-size:12px;
+            text-decoration:underline;
+            }
+          }
+        }
+        .other-container {
+          margin-top:30px;
+          h2 {
+            margin-bottom:10px;
+          }
+        }
+      }
+    }
+  }
+  // * /Contener * //
+
+  // * Footer * //
+  #footer {
+    margin:0 auto;
+    margin-top:100px;
+    text-align:left;
+    padding:15px 30px;
+    background-color:#a00020;
+    overflow:hidden;
+    font-size:12px;
+    color:#fff;
+    a {
+      font-size:12px;
+      color:#fff;
+      letter-spacing:0.5px;
+    }
+    .footer-contents {
+      float:left;
+      width:25%;
+      h3 {
+        font-size:20px;
+        margin-bottom:20px;
+        padding-top: 10px;
+      }
+      .image {
+        margin-left:20px;
+      }
+        .widget {
+          background-color:#fff;
+        }
+      p {
+        font-size:14px;
+        line-height:1.5;
+      }
+      h4 {
+        font-size:14px;
+        line-height:1.5;
+      }
+      img {
+        float:left;
+      }
+      .meta {
+        clear:both;
+        text-align:right;
+        padding-right:5px;
+        padding-top:30px;
+      }
+      li {
+        margin-left:20px;
+        line-height:2.25;
+      }
+    }
+    #copyright {
+      clear:both;
+      text-align:center;
+      padding-top:50px;
+    }
+  }
+}
+// * /Body * //

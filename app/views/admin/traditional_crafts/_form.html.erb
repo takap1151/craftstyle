@@ -1,0 +1,57 @@
+<%= form_for([:admin, @traditional_craft]) do |f| %>
+  <% if @traditional_craft.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@traditional_craft.errors.count, "error") %> prohibited this traditional_craft from being saved:</h2>
+
+      <ul>
+      <% @traditional_craft.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="clearfix">
+<div class="area">
+  <div class=control-group">
+    <%= f.label :伝統工芸品名 %><br />
+    <%= f.text_field :crafts %>
+  </div>
+  <div class=control-group">
+    <%= f.label :伝統工芸品名（英） %><br />
+    <%= f.text_field :crafts_en %>
+  </div>
+  <div class=control-group">
+    <%= f.label :カテゴリー %><br />
+    <%= f.text_field :categories %>
+  </div>
+  <div class=control-group">
+    <%= f.label :カテゴリー（英） %><br />
+    <%= f.text_field :categories_en %>
+  </div>
+  <div class=control-group">
+    <%= f.label :地方 %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class=control-group">
+    <%= f.label :地方（英） %><br />
+    <%= f.text_field :area_en %>
+  </div>
+</div>
+<div class="area">
+  <div class=control-group">
+    <%= f.label :地域 %><br />
+    <%= f.text_field :prefecture %>
+  </div>
+  <div class=control-group">
+    <%= f.label :地域（英） %><br />
+    <%= f.text_field :prefecture_en %>
+  </div>
+</div><!-- /.area -->
+</div><!-- /clearfix -->
+
+  <div class="form-actions">
+    <%= f.submit :class => 'btn btn-primary' %>
+<%= link_to 'Back', admin_traditional_crafts_path, :class => "btn " %>
+  </div>
+<% end %>

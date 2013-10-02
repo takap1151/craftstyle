@@ -1,0 +1,65 @@
+<div class="clearfix">
+  <%= image_tag @craftsman.profile_image, :size => '150x150' %>
+<table class="table table-bordered">
+<tr>
+  <th>Name</th>
+  <th>Name en</th>
+  <th>Company en</th>
+  <th>Company en</th>
+  <th>Tel</th>
+  <th>Address</th>
+  <th>Address_en</th>
+  <th>Mail</th>
+  <th>Website</th>
+  <th>カテゴリー</th>
+</tr>
+<tr>
+  <td><%= @craftsman.craftsman_name %></td>
+  <td><%= @craftsman.craftsman_name_en %></td>
+  <td><%= @craftsman.company %></td>
+  <td><%= @craftsman.company_en %></td>
+  <td><%= @craftsman.tel %></td>
+  <td><%= @craftsman.address %></td>
+  <td><%= @craftsman.address_en %></td>
+  <td><%= @craftsman.mail %></td>
+  <td><%= link_to @craftsman.website, @craftsman.website, :target => '_blank' %></td>
+  <% @craftsman.traditional_crafts.limit(1).each do |traditional_crafts| %>
+    <td><%= link_to traditional_crafts.crafts, [:admin, traditional_crafts] %></td>
+  <% end %>
+</tr>
+</table>
+
+<div class="span5">
+<p>Profile</p>
+<% unless @craftsman.profile.blank? %>
+ <%= simple_format @craftsman.profile %>
+ <% else %>
+   <p style="color:red">Blank</p>
+ <% end %>
+</div>
+
+<div class="span5">
+<p>Profile_en</p>
+<% unless @craftsman.profile_en.blank? %>
+ <%= simple_format @craftsman.profile_en %>
+ <% else %>
+   <p style="color:red">Blank</p>
+ <% end %>
+</div>
+
+<div class="span5">
+ <div class="form-actions">
+<%= link_to 'Edit', edit_admin_craftsman_path(@craftsman), :class => 'btn btn-primary' %>
+<%= link_to 'Back', admin_craftsmen_path, :class => 'btn' %>
+<%= link_to 'New Craftsmen product', new_admin_craftsmen_product_path(:craftsman_id => @craftsman.id), :class => 'btn btn-primary floatr' %>
+</div>
+</div><!-- /.span5 -->
+
+</div>
+<div>
+  <h2>商品一覧</h2>
+<% @craftsman.craftsmen_products.each do |f| %>
+  <%= link_to (image_tag f.product_image, :size => '300x300', :title => f.product_name), {:controller => 'craftsmen_products', :action => 'show', :id => f.id} %>
+<% end %>
+</div>
+  <p>商品数：<%= @craftsman.craftsmen_products.size %></p>

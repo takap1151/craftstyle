@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin::CustomMade</title>
+  <%= stylesheet_link_tag    "admin/application", :media => "all" %>
+  <%= javascript_include_tag "admin/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <div class="navbar navbar-fluid-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <%= link_to 'Admin::伝統Pj', admin_root_path, :class => 'brand' %>
+          <div class="container-fluid nav-collapse">
+            <ul class="nav">
+              <li><%= link_to "職人一覧", admin_craftsmen_path  %></li>
+              <li><%= link_to "職人商品一覧", admin_craftsmen_products_path  %></li>
+              <li><%= link_to "伝統工芸品一覧", admin_traditional_crafts_path  %></li>
+              <li><%= link_to "Facebook投稿記事", admin_japan_styles_path  %></li>
+              <li><%= link_to "問い合わせ", admin_inquiries_path  %></li>
+            </ul>
+          <% unless admin_current_user.present? %>
+            <div class="user_nav">
+              <ul class="nav">
+                <li><%= link_to "ログイン", admin_sessions_path %></li>
+              </ul>
+            </div><!-- user_nav -->
+          <% else %>
+            <div class="user_nav">
+            <ul class="nav">
+              <li><%= link_to 'ログアウト', admin_session_path(admin_current_user.id), :confirm => 'ログアウトしますか？', :method => :delete %></li>
+              <li><%= link_to "本番", root_path, :target => '_blank' %></li>
+            </ul>
+          <% end %>
+            </div><!-- user_nav -->
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    </header>
+  <p><%= alert %></p>
+    <!-- Contents -->
+    <div class="container-fluid">
+      <div class="row-fluid">
+          <%= bootstrap_flash %>
+          <%= yield %>
+      </div><!--/row-->
+    </div>
+
+  <div id="footer">
+<div id="copyright">
+  <p>COPYRIGHT &copy; <%= link_to 'Japan Crafts Style', root_path %>. All Rights Reserved<%= link_to '.', admin_root_path, :target => '_blank' %> <%= link_to 'Sitemap', sitemap_path %></p>
+</div><!-- /#copyright -->
+  </div>
+
+</body>
+</html>

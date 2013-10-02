@@ -1,0 +1,23 @@
+
+<hr>
+<%= current_user.id %><br>
+<%= FavoriteCraftsmen.find_by_id(current_user.id).craftsman_id %>
+<% FavoriteCraftsmen.where(:user_id => current_user.id).each do |f| %>
+  <%= f.craftsman_id %>
+<% end %>
+<hr>
+<% FavoriteCraftsmen.all.each do |f| %>
+  <%= f.user_id %>｜
+<% end %>
+
+<h2>ID:<%= current_user.id %><%= current_user.username %>様のオススメ職人</h2>
+<ul>
+</ul>
+  <% unless current_user.present? %>
+    <p>お気に入りの職人が見つかっていません</p>
+    <p>今すぐ探しましょう！</p>
+<% end %>
+
+
+
+

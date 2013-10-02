@@ -1,0 +1,21 @@
+<h1>職人商品一覧</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Product image</th>
+    <th>商品名</th>
+    <th>商品名（英）</th>
+    <th>職人名</th>
+    <th>カテゴリー</th>
+  </tr>
+
+<% @craftsmen_products.each do |craftsmen_product| %>
+  <tr>
+    <td><%= link_to (image_tag craftsmen_product.product_image, :size => '150x150'), [:admin, craftsmen_product] %></td>
+    <td><%= link_to craftsmen_product.product_name, [:admin, craftsmen_product] %></td>
+    <td><%= craftsmen_product.product_name_en %></td>
+    <td><%= link_to craftsmen_product.craftsman.craftsman_name, {:controller => 'craftsmen', :action => 'show', :id => craftsmen_product.craftsman_id} %></td>
+    <td><%= craftsmen_product.traditional_craft.crafts%>
+  </tr>
+<% end %>
+</table>

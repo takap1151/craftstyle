@@ -1,0 +1,48 @@
+<% content_for(:image, "http://profile.ak.fbcdn.net/hprofile-ak-prn1/c0.1.180.180/s160x160/164958_401706273274173_2129358066_a.png")-%>
+
+<% content_for :slideshow do -%>
+  <%= render 'home/slideshow' %>
+<% end -%>
+
+<% @craftsmen.each do |craftsman| %>
+  <div class="article">
+    <div class="img">
+      <%= link_to image_tag(craftsman.profile_image), craftsman, :class => 'bwWrapper' %>
+    </div><!-- /.img -->
+    <div class="meta">
+      <h2><%= link_to craftsman.craftsman_name_en, craftsman %></h2>
+      <% craftsman.traditional_crafts.limit(1).each do |f| %>
+        <div class="sub-text">
+          <%= f.crafts_en %>
+        </div>
+        <div class="excerpt">
+          <%= link_to truncate(craftsman.profile_en, :length => 80), craftsman %>
+        </div>
+      <% end %>
+    </div><!-- /.meta -->
+  </div><!-- /.article -->
+<% end %>
+<div style="clear:both;text-align:right;padding-top:30px;"><%= link_to 'And more...', craftsmen_path, :style => 'font-size:12px;' %></div>
+
+<div class="sub-title" style="clear:both">
+  <p><b>J</b>apanese traditional crafts and culture<p>
+</div>
+<% @japan_styles.each do |japan_style| %>
+  <div class="article">
+    <div class="img">
+      <%= link_to (image_tag japan_style.article_image), japan_style %>
+    </div><!-- /.img -->
+    <div class="meta">
+      <h2><%= link_to japan_style.article_title, japan_style %></h2>
+      <div class="sub-text">
+        <%= japan_style.updated_at.strftime('%b.%d') %>
+      </div>
+      <div class="excerpt">
+        <%= link_to truncate(japan_style.article_text, :length => 80),japan_style %> 
+      </div>
+    </div><!-- /.meta -->
+  </div><!-- /.article -->
+<% end %>
+<div style="clear:both;text-align:right;padding-top:30px;"><%= link_to 'And more...', japan_styles_path, :style => 'font-size:13px;' %></div>
+<%= render 'home/sns_box' %>
+

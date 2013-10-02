@@ -1,0 +1,2 @@
+module CraftsmenProductsHelper
+end

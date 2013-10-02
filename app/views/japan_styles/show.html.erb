@@ -1,0 +1,41 @@
+<% content_for(:title, "Japan Caluture & Japanese Style [#{@japan_style.article_title}] - Japan Crafts Style") -%> 
+<% content_for(:description, "Japan Caluture & Japanese Style [#{@japan_style.article_title}].We are introduction to Japanese traditional crafts from Tokyo Japan.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "Japan Caluture & Japanese Style [#{@japan_style.article_title}], japanese, tokyo, kyoto, katana, made in japan, japanese painting, crafts, 伝統工芸") -%> 
+
+<div class="main-container">
+  <h2><%= @japan_style.article_title %></h2>
+  <div class="img">
+    <%= image_tag @japan_style.article_image, :alt => @japan_style.article_title, :style => 'max-width:500px;max-height:500px' %>
+  </div>
+
+  <div class="main-article">
+    <div class="text">
+      <h3><%= simple_format (raw @japan_style.article_text) %></h3>
+    </div><!-- /.text -->
+    <% unless @japan_style.article_text_jp.blank? %>
+    <p>+++++</p>
+    <div class="sub-text">
+      <h3><%= simple_format (raw @japan_style.article_text_jp) %></h3>
+    </div><!-- /.sub-text -->
+  <% end %>
+    <!-- Reference -->
+    <% unless @japan_style.reference_name.blank? %>
+    <div class="reference">
+      via:&nbsp;<%= link_to "#{@japan_style.reference_name}", @japan_style.reference_url, :target => '_blank' , :rel => 'nofollow' %>
+</div>
+  <% end %>
+  <!-- /Reference -->
+  </div><!-- /.main-article -->
+
+  <div class="other-container">
+    <h2>Outher japan style article</h2>
+    <% @other_japan_styles.each do |other_japan_style| %>
+      <div class="grid" data-size="2">
+        <div class="imgholder">
+          <h3><%= link_to (image_tag other_japan_style.article_image, :alt => other_japan_style.article_title, :style => "width:190px;height:190px;"), other_japan_style %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div><!-- /.other-container -->
+<%= render 'home/sns_box' %>
+</div><!-- /.main-container -->

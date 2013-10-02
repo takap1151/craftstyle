@@ -1,0 +1,22 @@
+<div class="page-header">
+<h1>お問い合せ</h1>
+</div>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Description</th>
+    <th>Send time</th>
+  </tr>
+  <% @inquiries.each do |inquiry| %>
+  <tr>
+      <td><%= link_to inquiry.id, [:admin, inquiry] %></td>
+      <td><%= inquiry.name %></td>
+      <td><%= inquiry.email %></td>
+      <td><%= inquiry.description %></td>
+      <td><%= inquiry.created_at.strftime('%Y/%m/%d/%H:%M') %></td>
+  </tr>
+  <% end %>
+</table>

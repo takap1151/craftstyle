@@ -1,0 +1,632 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-01 16:54:58 +0900
+Processing by HomeController#index as HTML
+  Rendered home/_slideshow.html.erb (0.5ms)
+  [1m[36mCraftsman Load (9.2ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` ORDER BY profile_en DESC, id DESC LIMIT 12[0m
+  [1m[35mTraditionalCraft Load (12.4ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 10 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.6ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 8 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.4ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 7 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.3ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 1 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.5ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 5 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.4ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 2 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.4ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 4 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.5ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 9 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.8ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 6 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.4ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 3 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.4ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 11 LIMIT 1
+  [1m[36mJapanStyle Load (0.5ms)[0m  [1mSELECT `japan_styles`.* FROM `japan_styles` ORDER BY created_at DESC LIMIT 12[0m
+  Rendered home/_sns_box.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (463.4ms)
+Compiled camera.css  (0ms)  (pid 2623)
+Compiled common.css  (119ms)  (pid 2623)
+Compiled craftsmen.css  (4ms)  (pid 2623)
+Compiled craftsmen_products.css  (3ms)  (pid 2623)
+Compiled home.css  (13ms)  (pid 2623)
+Compiled inquiries.css  (3ms)  (pid 2623)
+Compiled japan_styles.css  (1ms)  (pid 2623)
+Compiled reset.css  (1ms)  (pid 2623)
+Compiled sessions.css  (1ms)  (pid 2623)
+Compiled traditional_crafts.css  (8ms)  (pid 2623)
+Compiled application.css  (444ms)  (pid 2623)
+  Rendered home/_external_script.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  [1m[35mCraftsman Load (1.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` ORDER BY updated_at DESC LIMIT 15
+  [1m[36mJapanStyle Load (0.6ms)[0m  [1mSELECT `japan_styles`.* FROM `japan_styles` ORDER BY updated_at DESC LIMIT 15[0m
+  [1m[35mCraftsmenProduct Load (0.5ms)[0m  SELECT `craftsmen_products`.* FROM `craftsmen_products` ORDER BY updated_at DESC LIMIT 15
+  Rendered inquiries/_new.html.erb (1216.7ms)
+  Rendered layouts/_footer.html.erb (1266.8ms)
+Compiled jquery.js  (3ms)  (pid 2623)
+Compiled jquery_ujs.js  (0ms)  (pid 2623)
+Compiled bootstrap.js  (325ms)  (pid 2623)
+Compiled camera.min.js  (3ms)  (pid 2623)
+Compiled craftsmen.js  (251ms)  (pid 2623)
+Compiled craftsmen_products.js  (159ms)  (pid 2623)
+Compiled inquiries.js  (158ms)  (pid 2623)
+Compiled japan_styles.js  (157ms)  (pid 2623)
+Compiled jquery.BlackAndWhite.js  (0ms)  (pid 2623)
+Compiled sessions.js  (166ms)  (pid 2623)
+Compiled traditional_crafts.js  (161ms)  (pid 2623)
+Compiled admin/inquiries.js  (176ms)  (pid 2623)
+Compiled application.js  (2007ms)  (pid 2623)
+Completed 200 OK in 4985ms (Views: 4742.4ms | ActiveRecord: 83.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/camera.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /camera.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /common.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/craftsmen.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /craftsmen.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/craftsmen_products.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /craftsmen_products.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /home.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/japan_styles.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /japan_styles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/inquiries.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:03 +0900
+Served asset /inquiries.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /reset.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/traditional_crafts.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /traditional_crafts.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /jquery.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/camera.min.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /camera.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/craftsmen.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /craftsmen.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /logo.png - 304 Not Modified (46ms)
+
+
+Started GET "/assets/craftsmen_products.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /craftsmen_products.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /inquiries.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/japan_styles.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /japan_styles.js - 304 Not Modified (238ms)
+
+
+Started GET "/assets/jquery.BlackAndWhite.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /jquery.BlackAndWhite.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/traditional_crafts.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:04 +0900
+Served asset /traditional_crafts.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:05 +0900
+Served asset /application.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/admin/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:05 +0900
+Served asset /admin/inquiries.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-10-01 16:55:08 +0900
+Served asset /favicon.ico - 304 Not Modified (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-01 16:55:57 +0900
+Processing by HomeController#index as HTML
+  Rendered home/_slideshow.html.erb (0.1ms)
+  [1m[36mCraftsman Load (8.2ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` ORDER BY profile_en DESC, id DESC LIMIT 12[0m
+  [1m[35mTraditionalCraft Load (0.5ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 10 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.8ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 8 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.4ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 7 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.6ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 1 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.8ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 5 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.6ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 2 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.5ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 4 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.5ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 9 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.6ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 6 LIMIT 1
+  [1m[36mTraditionalCraft Load (0.5ms)[0m  [1mSELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 3 LIMIT 1[0m
+  [1m[35mTraditionalCraft Load (0.4ms)[0m  SELECT `traditional_crafts`.* FROM `traditional_crafts` INNER JOIN `craftsmen_products` ON `traditional_crafts`.`id` = `craftsmen_products`.`traditional_craft_id` WHERE `craftsmen_products`.`craftsman_id` = 11 LIMIT 1
+  [1m[36mJapanStyle Load (0.5ms)[0m  [1mSELECT `japan_styles`.* FROM `japan_styles` ORDER BY created_at DESC LIMIT 12[0m
+  Rendered home/_sns_box.html.erb (0.1ms)
+  Rendered home/index.html.erb within layouts/application (127.3ms)
+  Rendered home/_external_script.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  [1m[35mCraftsman Load (8.2ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` ORDER BY updated_at DESC LIMIT 15
+  [1m[36mJapanStyle Load (1.5ms)[0m  [1mSELECT `japan_styles`.* FROM `japan_styles` ORDER BY updated_at DESC LIMIT 15[0m
+  [1m[35mCraftsmenProduct Load (0.3ms)[0m  SELECT `craftsmen_products`.* FROM `craftsmen_products` LIMIT 15
+  Rendered inquiries/_new.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (73.4ms)
+Completed 200 OK in 782ms (Views: 748.5ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camera.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /camera.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /craftsmen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen_products.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /craftsmen_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inquiries.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /inquiries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/japan_styles.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /japan_styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traditional_crafts.css?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /traditional_crafts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camera.min.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /camera.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /craftsmen.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/craftsmen_products.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /craftsmen_products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /inquiries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/japan_styles.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /japan_styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.BlackAndWhite.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /jquery.BlackAndWhite.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traditional_crafts.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /traditional_crafts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 16:55:58 +0900
+Served asset /admin/inquiries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-10-01 16:56:03 +0900
+Served asset /favicon.ico - 304 Not Modified (0ms)
+
+
+Started GET "/craftsmen_products" for 127.0.0.1 at 2013-10-01 16:56:10 +0900
+Processing by CraftsmenProductsController#index as HTML
+  [1m[36mCraftsmenProduct Load (3.1ms)[0m  [1mSELECT `craftsmen_products`.* FROM `craftsmen_products` WHERE `craftsmen_products`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCraftsmenProduct Load (1.7ms)[0m  SELECT `craftsmen_products`.* FROM `craftsmen_products` ORDER BY updated_at DESC
+  [1m[36mCraftsman Load (0.5ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.4ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 10 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.3ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 10 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.8ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCraftsman Load (0.6ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1
+  [1m[36mCraftsman Load (0.3ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 2 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.5ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 2 LIMIT 1
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1[0m
+  Rendered home/_sns_box.html.erb (0.1ms)
+  Rendered craftsmen_products/index.html.erb within layouts/application (146.7ms)
+  Rendered home/_external_script.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  [1m[35mCraftsman Load (0.6ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` ORDER BY updated_at DESC LIMIT 15
+  [1m[36mJapanStyle Load (0.6ms)[0m  [1mSELECT `japan_styles`.* FROM `japan_styles` ORDER BY updated_at DESC LIMIT 15[0m
+  [1m[35mCraftsmenProduct Load (0.3ms)[0m  SELECT `craftsmen_products`.* FROM `craftsmen_products` LIMIT 15
+  Rendered inquiries/_new.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (32.1ms)
+Completed 200 OK in 602ms (Views: 577.5ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camera.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /camera.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /craftsmen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen_products.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /craftsmen_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inquiries.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /inquiries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/japan_styles.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /japan_styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traditional_crafts.css?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /traditional_crafts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-10-01 16:56:11 +0900
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /craftsmen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camera.min.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /camera.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen_products.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /craftsmen_products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /inquiries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/japan_styles.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /japan_styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.BlackAndWhite.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /jquery.BlackAndWhite.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traditional_crafts.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /traditional_crafts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 16:56:12 +0900
+Served asset /admin/inquiries.js - 304 Not Modified (0ms)
+
+
+Started GET "/craftsmen_products" for 127.0.0.1 at 2013-10-01 17:00:05 +0900
+Processing by CraftsmenProductsController#index as HTML
+  [1m[36mCraftsmenProduct Load (4.5ms)[0m  [1mSELECT `craftsmen_products`.* FROM `craftsmen_products` WHERE `craftsmen_products`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCraftsmenProduct Load (1.1ms)[0m  SELECT `craftsmen_products`.* FROM `craftsmen_products` ORDER BY updated_at DESC
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.6ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 10 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 10 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.5ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 11 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 10 LIMIT 1[0m
+  [1m[35mCraftsman Load (0.4ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 9 LIMIT 1
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 4 LIMIT 1
+  [1m[36mCraftsman Load (0.7ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 1 LIMIT 1
+  [1m[36mCraftsman Load (0.4ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 8 LIMIT 1
+  [1m[36mCraftsman Load (2.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 2 LIMIT 1[0m
+  [1m[35mCraftsman Load (1.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 7 LIMIT 1
+  [1m[36mCraftsman Load (0.5ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 2 LIMIT 1
+  [1m[36mCraftsman Load (0.8ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `craftsmen`.* FROM `craftsmen` WHERE `craftsmen`.`id` = 5 LIMIT 1[0m
+  Rendered home/_sns_box.html.erb (0.2ms)
+  Rendered craftsmen_products/index.html.erb within layouts/application (404.8ms)
+  Rendered home/_external_script.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  [1m[35mCraftsman Load (0.6ms)[0m  SELECT `craftsmen`.* FROM `craftsmen` ORDER BY updated_at DESC LIMIT 15
+  [1m[36mJapanStyle Load (1.0ms)[0m  [1mSELECT `japan_styles`.* FROM `japan_styles` ORDER BY updated_at DESC LIMIT 15[0m
+  [1m[35mCraftsmenProduct Load (0.4ms)[0m  SELECT `craftsmen_products`.* FROM `craftsmen_products` LIMIT 15
+  Rendered inquiries/_new.html.erb (93.1ms)
+  Rendered layouts/_footer.html.erb (156.1ms)
+Completed 200 OK in 995ms (Views: 921.1ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camera.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /camera.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /common.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /craftsmen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen_products.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /craftsmen_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inquiries.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /inquiries.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/japan_styles.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /japan_styles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/reset.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /reset.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traditional_crafts.css?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /traditional_crafts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:06 +0900
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /logo.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/camera.min.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /camera.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /craftsmen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/craftsmen_products.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /craftsmen_products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /inquiries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/japan_styles.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /japan_styles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.BlackAndWhite.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /jquery.BlackAndWhite.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traditional_crafts.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /traditional_crafts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/inquiries.js?body=1" for 127.0.0.1 at 2013-10-01 17:00:07 +0900
+Served asset /admin/inquiries.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-10-01 17:00:13 +0900
+Served asset /favicon.ico - 304 Not Modified (0ms)

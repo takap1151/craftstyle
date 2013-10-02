@@ -1,0 +1,39 @@
+<%= form_for([:admin, @craftsmen_product]) do |f| %>
+  <% if @craftsmen_product.errors.any? %>
+    <div id="error_explanation">
+      <p><%= pluralize(@craftsmen_product.errors.count, "error") %></p>
+
+      <ul>
+      <% @craftsmen_product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group ">
+    <%= f.label :商品写真 %><br />
+    <%= f.text_field :product_image %>
+  </div>
+  <div class="control-group ">
+    <%= f.label :商品名 %><br />
+    <%= f.text_field :product_name %>
+  </div>
+  <div class="control-group ">
+    <%= f.label :商品名（英） %><br />
+    <%= f.text_field :product_name_en %>
+  </div>
+  <div class="control-group ">
+    <%= f.label :商品カテゴリー %><br />
+    <%= f.collection_select(:traditional_craft_id, TraditionalCraft.all, :id, :categories, { :include_blank => 'カテゴリー' }) %>
+  </div>
+  
+  <div class="control-group ">
+    <%= f.label :職人ID %><br />
+    <%= f.text_field :craftsman_id, :readonly => 'readonly' %>
+  </div>
+
+  <div class="actions floatl">
+    <%= f.submit :class => 'btn btn-primary '%>｜
+  </div>
+<% end %>

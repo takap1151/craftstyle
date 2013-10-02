@@ -1,0 +1,22 @@
+<% content_for(:title, "Japan Traditional Crafts - Japan Crafts Style") -%> 
+<% content_for(:description, "Japanese Traditional Craft -  We are introduction to Japanese traditional crafts from Tokyo Japan.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "japanese, tokyo, kyoto, katana, made in japan, japanese painting, crafts, 伝統工芸") -%> 
+
+<!-- Contents -->
+<% @craftsmen_products.each do |craftsmen_product| %>
+<div class="article">
+  <div class="img">
+  <%= link_to (image_tag craftsmen_product.product_image), craftsmen_product, :class => 'hover' %>
+  </div><!-- /.img -->
+  <div class="meta">
+  <h2><%= link_to craftsmen_product.product_name_en, craftsmen_product %></h2>
+  <div class="sub-text">
+  <%= craftsmen_product.craftsman.craftsman_name_en %><br>
+  </div>
+  <div class="excerpt">
+  <h3><%= link_to "#{craftsmen_product.product_name_en} is made by ..." , craftsmen_product %></h3>
+  </div>
+  </div><!-- /.meta -->
+</div><!-- /.article -->
+<% end %>
+<%= render 'home/sns_box' %>

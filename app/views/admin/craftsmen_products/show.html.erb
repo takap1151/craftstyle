@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+  <%= image_tag @craftsmen_product.product_image, :style => 'max-width:500px;' %>
+  <br>
+  <b>Product name:</b>
+  <%= @craftsmen_product.product_name %><br>
+  <b>Product name en:</b>
+  <%= @craftsmen_product.product_name_en %>
+
+  <br>
+  <b>CraftsmanID:</b>
+  <%= @craftsmen_product.craftsman_id %>
+
+  <br>
+  <b>Traditional_craft_ID（ジャンル）:</b>
+  <%= @craftsmen_product.traditional_craft.crafts%>
+
+  <br>
+  <b>Craftsman:</b>
+  <%= @craftsmen_product.craftsman.craftsman_name %>
+  <%= Craftsman.find(@craftsmen_product.craftsman_id).craftsman_name %>
+
+
+  <div class="form-actions">
+    <%= link_to 'Edit', edit_admin_craftsmen_product_path(@craftsmen_product), :class => 'btn btn-primary' %>
+    <%= link_to 'Back', {:controller => 'craftsmen', :action => 'show', :id => @craftsmen_product.craftsman_id}, :class => 'btn' %>
+</div>

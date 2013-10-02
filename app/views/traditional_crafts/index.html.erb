@@ -1,0 +1,30 @@
+<h1>Listing traditional_crafts</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Crafts</th>
+    <th>Crafts en</th>
+    <th>Categories</th>
+    <th>Categories en</th>
+    <th>Area</th>
+    <th>Area en</th>
+    <th>Prefecture</th>
+    <th>Prefecture en</th>
+  </tr>
+
+<% @traditional_crafts.each do |traditional_craft| %>
+  <tr>
+    <td><%= link_to traditional_craft.crafts, traditional_craft %></td>
+    <td><%= traditional_craft.crafts_en %></td>
+    <td><%= traditional_craft.categories %></td>
+    <td><%= traditional_craft.categories_en %></td>
+    <td><%= traditional_craft.area %></td>
+    <td><%= traditional_craft.area_en %></td>
+    <td><%= traditional_craft.prefecture %></td>
+    <td><%= traditional_craft.prefecture_en %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= render 'home/sns_box' %>

@@ -1,0 +1,30 @@
+<% content_for(:image, "http://profile.ak.fbcdn.net/hprofile-ak-prn1/c0.1.180.180/s160x160/164958_401706273274173_2129358066_a.png")-%>
+<% content_for(:description, "【Japanese Traditional Craftsmen】We are introduction to Japanese traditional crafts from Tokyo Japan.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "japanese, tokyo, kyoto, katana, made in japan, japanese painting, craftsmen, 伝統工芸") -%> 
+
+
+<% content_for :slideshow do -%>
+  <%= render 'home/slideshow' %>
+<% end -%>
+
+<% @craftsmen.each do |craftsman| %>
+  <div class="article">
+    <div class="img">
+      <%= link_to image_tag(craftsman.profile_image), craftsman, :class => 'bwWrapper' %>
+    </div><!-- /.img -->
+    <div class="meta">
+      <h2><%= link_to craftsman.craftsman_name_en, craftsman %></h2>
+      <% craftsman.traditional_crafts.limit(1).each do |f| %>
+        <div class="sub-text">
+          <%= f.crafts_en %>
+        </div>
+        <div class="excerpt">
+          <%= link_to truncate(craftsman.profile_en, :length => 80), craftsman %>
+        </div>
+      <% end %>
+    </div><!-- /.meta -->
+  </div><!-- /.article -->
+<% end %>
+
+<%= render 'home/sns_box' %>
+

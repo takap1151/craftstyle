@@ -1,0 +1,74 @@
+<hr>
+<div class="clearfix">
+<%= form_for([:admin, @craftsman]) do |f| %>
+  <% if @craftsman.errors.any? %>
+    <div id="error_explanation">
+      <p style="color:red"><%= pluralize(@craftsman.errors.count, "error") %></p>
+
+      <ul>
+      <% @craftsman.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="area">
+  <div class="control-group floatl">
+    <%= f.label :職人名 %><br />
+    <%= f.text_field :craftsman_name %>
+  </div>
+    <div class="control-group">
+    <%= f.label :職人名（英） %><br />
+    <%= f.text_field :craftsman_name_en %>
+  </div>
+  <div class="control-group floatl">
+    <%= f.label :会社名 %><br />
+    <%= f.text_field :company %>
+  </div>
+  <div class="control-group">
+    <%= f.label :会社名（英） %><br />
+    <%= f.text_field :company_en %>
+  </div>
+  <div class="control-group floatl">
+    <%= f.label :電話番号 %><br />
+    <%= f.text_field :tel %>
+  </div>
+  <div class="control-group">
+    <%= f.label :メールアドレス %><br />
+    <%= f.text_field :mail, :class => 'text_field span6' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :住所 %><br />
+    <%= f.text_field :address, :class => 'text_field span7' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :住所（英） %><br />
+    <%= f.text_field :address_en, :class => 'text_field span7' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :プロフィール写真（URL） %><br />
+    <%= f.text_field :profile_image, :class => 'text_field span7' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Webサイト（URL） %><br />
+    <%= f.text_field :website, :class => 'text_field span7' %>
+  </div>
+</div><!-- area -->
+  
+  <div class="area">
+  <div class="control-group area">
+    <%= f.label :プロフィール紹介 %><br />
+    <%= f.text_area :profile, :class => 'text_area span11', :size => "60x25" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :プロフィール紹介（英） %><br />
+    <%= f.text_area :profile_en, :class => 'text_area span6', :size => "60x25" %>
+  </div>
+</div><!-- area -->
+</div><!-- /.clearfix -->
+
+  <div class="actions floatl">
+    <%= f.submit :class => 'btn btn-primary' %>｜
+  </div>
+<% end %>

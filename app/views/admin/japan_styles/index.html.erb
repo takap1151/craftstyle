@@ -1,0 +1,23 @@
+<h1>Facebook投稿記事一覧</h1>
+
+<%= link_to 'New', new_admin_japan_style_path, :class => 'btn btn-primary' %>
+<br />
+<table class="table table-bordered">
+  <tr>
+    <th>Article image</th>
+    <th>Article title</th>
+    <th>Article text</th>
+    <th>Article text JP</th>
+  </tr>
+
+<% @japan_styles.each do |japan_style| %>
+  <tr>
+    <td><%= link_to (image_tag japan_style.article_image, :size => '150x150'), [:admin, japan_style] %></td>
+    <td><%= japan_style.article_title %></td>
+    <td><%= japan_style.article_text %></td>
+    <td><%= japan_style.article_text_jp %></td>
+  </tr>
+<% end %>
+</table>
+
+

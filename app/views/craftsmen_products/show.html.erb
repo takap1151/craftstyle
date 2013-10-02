@@ -1,0 +1,36 @@
+<% content_for(:title, "Japanese Traditional Craft [#{@craftsmen_product.product_name_en}(#{@craftsmen_product.traditional_craft.crafts_en})] - Japan Crafts Style") -%> 
+<% content_for(:description, "Japanese Traditional Craft [#{@craftsmen_product.product_name_en}(#{@craftsmen_product.traditional_craft.crafts_en})].We are introduction to Japanese traditional crafts from Tokyo Japan.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "Japanese Traditional Craft [#{@craftsmen_product.product_name_en}(#{@craftsmen_product.traditional_craft.crafts_en})], japanese, tokyo, kyoto, katana, made in japan, japanese painting, crafts, 伝統工芸") -%> 
+
+<div class="main-container">
+  <h2><%= @craftsmen_product.product_name_en %> (<%= @craftsmen_product.traditional_craft.crafts_en %>)</h2>
+  <div class="img">
+    <%= image_tag @craftsmen_product.product_image, :style => 'max-width:500px;' %>
+  </div>
+  <div class="main-article">
+    <div class="text">
+      <%= @craftsmen_product.product_name_en %><br>
+      <h3>" <%= @craftsmen_product.product_name_en %> " is made by <%= link_to @craftsmen_product.craftsman.craftsman_name_en, @craftsmen_product.craftsman %>.<br>
+        " <%= @craftsmen_product.product_name_en %> " is part of the Japanese traditional crafts and grouped <%= link_to @craftsmen_product.traditional_craft.crafts_en, @craftsmen_product.traditional_craft %>.</h3>
+    </div><!-- /.text -->
+    <p>+++++</p>
+    <div class="sub-text">
+      <h3>" <%= @craftsmen_product.product_name %> "は<%= link_to @craftsmen_product.craftsman.craftsman_name, @craftsmen_product.craftsman %>によって製作された、日本の伝統工芸品の一つです。<br>
+        カテゴリーは<%= link_to @craftsmen_product.traditional_craft.crafts, @craftsmen_product.traditional_craft %>に分類されます。<br>
+        本製品及びその他伝統工芸品の詳細・購入方法につきましては直接<%= link_to '職人様', @craftsmen_product.craftsman %>のWebサイトよりお問い合せ下さい。</h3>
+    </div><!-- /.sub-text -->
+  </div><!-- /.main-article -->
+
+  <div class="other-container">
+    <h2>Other <%= @craftsmen_product.craftsman.craftsman_name_en %>s Crafts</h2>
+    <% @other_crafts.each do |other_craft| %>
+      <div class="grid" data-size="2">
+        <div class="imgholder">
+          <h3><%= link_to (image_tag other_craft.product_image, :alt => other_craft.product_name_en, :style => "width:190px;height:190px;"), other_craft %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div><!-- /.other-container -->
+
+<%= render 'home/sns_box' %>
+</div><!-- /.main-container -->

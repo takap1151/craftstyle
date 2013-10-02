@@ -1,0 +1,32 @@
+<div class="page-header">
+<h1>登録職人一覧</h1>
+</div>
+
+<div class="span10">
+<table class="table table-bordered">
+  <tr>
+    <th>id</th>
+    <th>職人名</th>
+    <th>職人名_en</th>
+    <th>会社名</th>
+    <th>住所</th>
+    <th>メールアドレス</th>
+  </tr>
+
+  <% @craftsmen.each do |craftsman| %>
+    <tr>
+      <td><%= craftsman.id %></td>
+      <td><%= link_to craftsman.craftsman_name, [:admin, craftsman] %></td>
+      <td><%= craftsman.craftsman_name_en %></td>
+      <td><%= craftsman.company %></td>
+      <td><%= craftsman.address %></td>
+      <td><%= craftsman.mail %></td>
+    </tr>
+  <% end %>
+</table>
+
+ <div class="form-actions">
+<%= link_to 'New Craftsman', new_admin_craftsman_path, :class => 'btn btn-primary' %>
+</div>
+</div>
+

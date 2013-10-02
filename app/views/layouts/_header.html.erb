@@ -1,0 +1,11 @@
+<!-- Nav -->
+<div id="logo">
+  <h1><%= link_to image_tag('logo.png', :alt => 'Japan crafts style'), root_path %></h1>
+</div>
+<div id="nav">
+  <ul>
+    <li><%= link_to raw("<b>C</b>raftsmen"), craftsmen_path, :class => 'hover' %></li>
+    <li><%= link_to raw("<b>C</b>raftsmen Products"), craftsmen_products_path, :class => 'hover' %></li>
+    <li><%= link_to raw("<b>J</b>apan Style"), japan_styles_path, :class => 'hover' %></li>
+  </ul>
+</div><!-- /#Nav -->

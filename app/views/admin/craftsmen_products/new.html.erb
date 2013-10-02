@@ -1,0 +1,9 @@
+<h1>【<%= Craftsman.find(@craftsmen_product.craftsman_id).craftsman_name %>さん】の新規商品登録</h1>
+    
+
+<%= render 'form' %>
+
+<div class="actions">
+  <%= link_to 'Back', {:controller => 'craftsmen', :action => 'show', :id => @craftsmen_product.craftsman_id }, :class => "btn " %>
+</div>
+

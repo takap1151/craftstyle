@@ -1,0 +1,47 @@
+<% content_for(:title, "Sitemap - Japan Crafts Style") -%> 
+<% content_for(:description, "This page is Sitemap.We are introduction to Japanese traditional crafts.The craftsmen featured in this site also accept custom made orders of Japanese traditional crafts.") -%> 
+<% content_for(:keywords, "japanese, japanstyle, japanese painting, custom, japanese crafts, 伝統工芸") -%> 
+
+<%= render 'home/sns_box' %>
+<div id="sitemap">
+<h2>Sitemap</h2>
+
+<div class="contents">
+<h3>Craftsmen</h3>
+
+<ul>
+<% @craftsmen.each do |craftsman| %>
+  <li><%= link_to craftsman.craftsman_name_en, craftsman %></li>
+<% end %>
+<%= link_to 'list', craftsmen_path %>
+</ul>
+
+<h3>Craftsmen Products</h3>
+
+<ul>
+<% @craftsmen_products.each do |craftsman_product| %>
+  <li><%= link_to craftsman_product.product_name_en, craftsman_product %></li>
+<% end %>
+<%= link_to 'list', craftsmen_products_path %>
+</ul>
+</div><!-- /.contents -->
+
+<div class="contents">
+<h3>Japan Style</h3>
+
+<ul>
+<% @japan_styles.each do |japan_style| %>
+  <li><%= link_to japan_style.article_title, japan_style %></li>
+<% end %>
+<%= link_to 'list', japan_styles_path %>
+</ul>
+
+<h3>SNS</h3>
+
+<ul>
+  <li><%= link_to 'Facebook', 'https://www.facebook.com/JapanCraftsStyle' , :target => '_blank' %></li>
+  <li><%= link_to 'Twitter', 'https://twitter.com/JCraftStyle' , :target => '_blank' %></li>
+  <li></li>
+</ul>
+</div><!-- /.contents -->
+</div><!-- /#Sitemap -->
